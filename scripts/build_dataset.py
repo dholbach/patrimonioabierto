@@ -9,7 +9,12 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
-from geometry import bbox_of_multipolygon, multipolygon_centroid, point_in_multipolygon
+from geometry import (
+    bbox_of_multipolygon,
+    multipolygon_centroid,
+    multipolygon_coordinates,
+    point_in_multipolygon,
+)
 
 RAW_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 WEB_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "web", "data")
@@ -66,8 +71,8 @@ def index_municipios(munis_geojson):
         indexed.append(
             {
                 "props": f["properties"],
-                "coords": f["geometry"]["coordinates"],
-                "bbox": bbox_of_multipolygon(f["geometry"]["coordinates"]),
+                "coords": multipolygon_coordinates(f["geometry"]),
+                "bbox": bbox_of_multipolygon(multipolygon_coordinates(f["geometry"])),
             }
         )
     return indexed
@@ -265,7 +270,7 @@ def main():
     for f in monuments:
         p = f["properties"]
         cid = str(p["c_bien_id"])
-        lon, lat = multipolygon_centroid(f["geometry"]["coordinates"])
+        lon, lat = multipolygon_centroid(multipolygon_coordinates(f["geometry"]))
         muni_props, approx = match_municipio(lon, lat, indexed_munis)
         if approx:
             approx_count += 1

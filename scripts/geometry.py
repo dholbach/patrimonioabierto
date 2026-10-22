@@ -6,6 +6,19 @@ UTM<->WGS84 conversion here.
 """
 
 
+def multipolygon_coordinates(geometry):
+    """A GeoJSON Polygon or MultiPolygon geometry's coordinates, as a
+    MultiPolygon's - what every function below takes. JCyL's WFS sent every
+    monument as a MultiPolygon until mid-October 2026, then most of them
+    (2312 of 2635) as plain Polygons, one nesting level shallower.
+    """
+    if geometry["type"] == "Polygon":
+        return [geometry["coordinates"]]
+    if geometry["type"] == "MultiPolygon":
+        return geometry["coordinates"]
+    raise ValueError(f"expected a Polygon or MultiPolygon, got {geometry['type']}")
+
+
 def _ring_contribution(ring):
     """Shoelace-formula contribution of one ring to (area, cx_sum, cy_sum)."""
     a = cx = cy = 0.0
