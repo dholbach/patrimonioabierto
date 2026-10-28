@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from geometry import (  # noqa: E402 - path setup above must run first
     bbox_of_multipolygon,
     multipolygon_centroid,
+    multipolygon_coordinates,
     point_in_multipolygon,
 )
 
@@ -84,6 +85,23 @@ class BboxOfMultipolygonTests(unittest.TestCase):
     def test_bbox_spans_all_parts(self):
         self.assertEqual(bbox_of_multipolygon(TWO_SQUARES), (0, 0, 12, 12))
 
+
+
+class MultipolygonCoordinatesTest(unittest.TestCase):
+    def test_multipolygon_unchanged(self):
+        geom = {"type": "MultiPolygon", "coordinates": TWO_SQUARES}
+        self.assertEqual(multipolygon_coordinates(geom), TWO_SQUARES)
+
+    def test_polygon_wrapped(self):
+        # How JCyL sends most monuments since mid-October 2026: one level
+        # shallower, which multipolygon_centroid used to choke on.
+        geom = {"type": "Polygon", "coordinates": SQUARE[0]}
+        self.assertEqual(multipolygon_coordinates(geom), SQUARE)
+        self.assertEqual(multipolygon_centroid(multipolygon_coordinates(geom)), (5.0, 5.0))
+
+    def test_other_types_rejected(self):
+        with self.assertRaises(ValueError):
+            multipolygon_coordinates({"type": "Point", "coordinates": [1, 2]})
 
 if __name__ == "__main__":
     unittest.main()
