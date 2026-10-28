@@ -1,7 +1,9 @@
 version: 2
 updates:
   # docker-compose.yml's caddy image, now pinned to an exact version.
-  - package-ecosystem: "docker"
+  # "docker-compose", not "docker": the latter only scans Dockerfiles, and
+  # this repo has none, so the caddy pin was never bumped.
+  - package-ecosystem: "docker-compose"
     directory: "/"
     schedule:
       interval: "monthly"
