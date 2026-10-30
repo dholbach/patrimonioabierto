@@ -38,7 +38,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/280-iglesia-de-san-andres/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/300-iglesia-de-san-nicolas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/309-iglesia-de-san-pedro/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/317-iglesia-de-santo-domingo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/328-iglesia-de-santo-tome-el-viejo-museo-de-avila-almacen-visitable/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/338-iglesia-parroquial-de-san-juan/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/347-iglesia-parroquial-de-santiago/</loc></url>
@@ -187,6 +186,7 @@
   <url><loc>https://patrimonioabierto.es/monumento/1869-torres-de-carazo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/1874-torre-del-monte-o-de-montejo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/1880-monasterio-de-san-pedro-de-cardena/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/1894-canal-de-castilla-esclusa-10-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/1899-casa-gutierrez-barona-o-el-fuerte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/1904-castillo-de-castrojeriz/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/1909-iglesia-colegiata-santa-maria-del-manzano/</loc></url>
@@ -269,8 +269,14 @@
   <url><loc>https://patrimonioabierto.es/monumento/2572-convento-de-santa-clara/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2581-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2596-torre-de-navagos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2601-arqueta-y-derrame-de-abanades/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2606-canal-de-castilla-acueducto-de-abanades/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2611-canal-de-castilla-acueducto-de-carrecalzada-o-valderramino/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2616-iglesia-santa-maria-de-la-asuncion/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2624-canal-de-castilla-puente-de-carrecalzada/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2629-torreon-de-tagarrosa/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2634-canal-de-castilla-esclusa-14-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2639-canal-de-castilla-central-hidroelectrica-molino-en-esclusa-14/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2644-torre-de-paralacuesta/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2655-castillo-de-urria-o-de-montealegre/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2661-casa-fuerte-de-los-alvarado/</loc></url>
@@ -429,7 +435,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/3899-iglesia-de-santa-eugenia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/3906-iglesia-de-san-martin/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/3914-rollo-de-justicia/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/3918-torreon-de-zuneda/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/3923-iglesia-de-san-pedro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/3931-iglesia-de-san-nicolas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/3939-castillo-de-zumel/</loc></url>
@@ -531,7 +536,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/5088-recinto-murado/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5094-monasterio-de-santa-maria-de-sandoval/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5112-la-villa/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/5120-castillo-de-lusio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5130-iglesia-parroquial/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5139-castillo-de-palacios-de-la-valduerna/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5149-castro-del-chano/</loc></url>
@@ -605,7 +609,10 @@
   <url><loc>https://patrimonioabierto.es/monumento/5942-yacimiento-arqueologico-antigua-ciudad-de-lancia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5955-iglesia-martirial-iglesia-vieja/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/5970-iglesia-de-santa-maria-de-arbas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/5999-canal-de-castilla-acueducto-de-valdeginate/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6005-iglesia-parroquial/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6022-canal-de-castilla-molino-y-fabrica-de-harinas-en-esclusa-1-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6027-canal-de-castilla-esclusa-1-ramal-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6032-casa-rectoral/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6039-castillo-de-aguilar/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6044-colegiata-de-san-miguel/</loc></url>
@@ -626,17 +633,25 @@
   <url><loc>https://patrimonioabierto.es/monumento/6253-casa-torre/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6258-ermita-de-santa-cecilia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6264-iglesia-parroquial-de-san-juan-bautista/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6273-canal-de-castilla-esclusa-1-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6283-canal-de-castilla-primera-retencion-y-caseta-de-regulacion/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6293-canal-de-castilla-esclusa-2-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6298-iglesia-de-san-pedro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6313-iglesia-de-san-vicente/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6327-iglesia-de-santa-maria/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6343-rollo-de-justicia-en-barrio-de-san-pedro/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6353-canal-de-castilla-esclusa-3-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6359-rollo-de-justicia-de-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6365-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6371-colegiata-san-miguel-arcangel/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6376-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6382-iglesia-de-san-fructuoso/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6399-acequia-de-carralval/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6404-arqueta-del-gato/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6409-canal-de-castilla-cueducto-de-arrayales/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6414-ermita-de-nuestra-senora-de-las-fuentes/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6421-iglesia-parroquial-de-san-pedro/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6436-puente-del-gallo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6441-torreon-de-la-greda/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6446-casco-historico-de-la-ciudad/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6460-castillo-de-astudillo-la-mota/</loc></url>
@@ -650,21 +665,42 @@
   <url><loc>https://patrimonioabierto.es/monumento/6586-iglesia-de-san-cornelio-y-san-cipriano/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6605-iglesia-de-santa-marina/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6622-torreon-de-villanueva-de-la-torre/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6627-acequia-de-arenales/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6632-acequia-de-santa-maria/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6637-canal-de-castilla-acueducto-de-arenales/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6642-acueducto-de-valdemudo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6647-canal-de-castilla-acueducto-de-belloto/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6652-canal-de-castilla-acueducto-de-san-pelayo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6657-canal-de-castilla-acueducto-de-santa-maria/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6662-acueducto-de-santo-cilde/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6667-iglesia-de-santa-eugenia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6676-iglesia-de-santa-maria/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6685-puente-de-valdemudo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6690-puente-de-becerril/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6695-villa-de-becerril-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6702-castillo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6709-canal-de-castilla-esclusa-5-ramal-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6714-iglesia-parroquial-de-san-pedro-apostol/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6724-canal-de-castilla-acueducto-de-carremarsilla/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6729-iglesia-parroquial-de-nuestra-senora-de-la-asuncion/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6738-rollo-de-justicia-de-la-villa/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6744-canal-de-castilla-esclusa-16-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6749-iglesia-de-santa-maria-la-real/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6758-iglesia-de-san-pelayo-martir/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6766-canal-de-castilla-vivienda-esclusero-esclusa-2-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6771-canal-de-castilla-fabrica-de-harinas-en-esclusa-2-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6776-puente-de-capillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6781-canal-de-castilla-esclusa-2-ramal-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6786-iglesia-de-santa-maria/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6807-iglesia-de-santiago/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6825-monasterio-de-san-zoilo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6850-canal-de-castilla-esclusa-3-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6855-canal-de-castilla-esclusa-4-ramal-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6860-iglesia-parroquial-de-la-asuncion/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6871-iglesia-de-la-transfiguracion/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6882-castillo-del-conde-de-orgaz/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6887-fabrica-de-piensos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/6892-puente-del-membrillar/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6898-casa-del-general-san-martin/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6912-villa-romana-de-tejada/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6927-iglesia-de-santa-maria-del-castillo/</loc></url>
@@ -674,27 +710,66 @@
   <url><loc>https://patrimonioabierto.es/monumento/6956-iglesia-parroquial-nuestra-senora-de-la-asuncion/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6986-iglesia-de-nuestra-senora-de-la-paz/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/6997-rollo-de-justicia/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7001-acueducto-de-fuente-mimbre/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7011-iglesia-de-san-facundo-y-san-primitivo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7018-puente-de-bezana/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7023-puente/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7030-rollo-de-justicia-de-san-salvador-del-moral/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7035-rollo-de-justicia-de-la-villa/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7040-canal-de-castilla-acueducto-de-culdeque/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7045-canal-de-castilla-acueducto-de-san-juan/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7055-canal-de-castilla-esclusa-37-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7060-canal-de-castilla-esclusa-38-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7071-fabrica-de-harinas-estrella-de-castilla/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7080-canal-de-castilla-fabrica-de-harinas-en-esclusa-38/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7095-la-ciudad/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7101-la-huelga/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7112-murallon-de-duenas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7122-puente-de-duenas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7127-villa-possidica-o-cercado-de-san-isidro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7145-iglesia-de-santa-maria/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7165-arqueta-de-carravacas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7170-canal-de-castilla-acequia-de-carreboadilla/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7175-canal-de-castilla-acueducto-de-ucieza/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7180-acueducto-de-valdecornete/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7185-canal-de-castilla-batan-en-conjunto-esclusas-17-18-19-20-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7190-canal-de-castilla-esclusas-17-18-19-20-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7195-iglesia-de-san-martin/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7201-iglesia-de-santa-maria-del-castillo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7209-canal-de-castilla-fabrica-de-harinas-en-esclusas-17-18-19-20-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7214-puente-del-ferrocarril/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7219-canal-de-castilla-esclusa-21-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7224-canal-de-castilla-acueducto-de-carracea/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7229-el-pueblo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7240-iglesia-de-santa-maria/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7248-puente-de-fuentes-de-nava/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7254-castillo-de-fuentes-de-valdepero/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7268-viviendas-en-retencion-del-serron/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7273-canal-de-castilla-esclusa-30-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7278-canal-de-castilla-esclusas-25-26-27-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7283-canal-de-castilla-esclusas-28-29-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7288-canal-de-castilla-fabrica-de-harinas-central-hidroelectrica-esclu-28-29-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7293-canal-de-castilla-fabrica-de-harinas-esclusas-25-26-27-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7298-retencion-del-serron/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7304-casa-grande/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7315-ermita-de-santa-maria-de-las-eras/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7322-acueducto-de-los-hortezuelos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7327-canal-de-castilla-esclusa-7-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7332-canal-de-castilla-esclusa-4-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7337-canal-de-castilla-esclusa-5-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7343-puente-sobre-el-canal-de-castilla-en-herrera/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7348-segunda-retencion-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7353-yacimiento-arqueologico/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7363-canal-de-castilla-esclusa-13-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7368-canal-de-castilla-esclusas-11-12-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7373-canal-de-castilla-esclusa-8-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7378-canal-de-castilla-esclusa-9-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7383-iglesia-de-santa-cecilia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7392-castillo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7397-acueducto-de-casablanca/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7403-iglesia-de-santa-maria-y-antigua-abadia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7418-rollo-de-justicia/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7423-canal-de-castilla-acueducto-de-valdegara/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7438-iglesia-parroquial-de-nuestra-senora-del-tovar/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7449-castillo-de-monzon-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7454-ermita-del-oteruelo/</loc></url>
@@ -703,9 +778,13 @@
   <url><loc>https://patrimonioabierto.es/monumento/7485-iglesia-de-san-pedro-o-de-san-juan-bautista/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7493-iglesia-de-santa-eufemia-de-cozuelo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7500-iglesia-de-la-asuncion/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7509-acueducto-de-las-gatillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7514-canal-de-castilla-acueducto-del-tesoro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7534-colegio-de-villandrando/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7545-colegio-publico-modesto-lafuente/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7558-convento-de-san-pablo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7566-darsena-de-palencia/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7571-canal-de-castilla-esclusas-31-32-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7577-fachada-iglesia-de-san-bernardo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7583-iglesia-catedral-de-san-antolin/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7591-iglesia-de-nuestra-senora-de-la-calle/</loc></url>
@@ -714,15 +793,29 @@
   <url><loc>https://patrimonioabierto.es/monumento/7614-iglesia-de-san-miguel/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7620-la-casa-grande-de-monte-el-viejo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7625-la-ciudad/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7630-fabrica-harinas-central-hidroelectrica-esclusas-31-32-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7635-museo-arqueologico-provincial-casa-del-cordon/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7642-palacio-de-los-aguado-pardo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7660-puente-de-las-arcas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7665-puentecillas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7682-muralla-y-castillo-de-palenzuela/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7687-castro-y-necropolis-celtibericos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7694-recinto-urbano-de-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7700-iglesia-de-san-lorenzo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7709-acequia-de-sahagun-el-viejo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7714-canal-de-castilla-acueducto-de-arroyo-mayor/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7719-canal-de-castilla-acueducto-de-arroyo-melgar/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7724-canal-de-castilla-acueducto-de-carrular/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7729-canal-de-castilla-acueducto-del-dujo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7734-acueducto-del-real/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7739-museo-de-la-iglesia-de-santa-eulalia/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7747-puente-de-nevilla/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7752-puente-de-sahagun-el-viejo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7757-puente-del-deseo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7767-yacimiento-la-olmeda/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7781-arqueta-de-fuentemanias/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7786-canal-de-castilla-acueducto-de-val/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7796-puente-de-pina/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7806-iglesia-parroquial-de-santiago/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7821-iglesia-parroquial-de-la-santa-cruz/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7832-monte-bernorio/</loc></url>
@@ -731,7 +824,13 @@
   <url><loc>https://patrimonioabierto.es/monumento/7857-el-canon-de-la-horadada/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7874-monasterio-de-santa-maria-de-vega/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7881-rollo-de-justicia-de-la-villa/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7886-puente-de-requena/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7891-canal-de-castilla-central-hidroelectrica-en-esclusas-22-23-24-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7896-canal-de-castilla-esclusas-22-23-24-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7901-canal-de-castilla-molino-en-esclusas-22-23-24-ramal-norte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7906-monasterio-de-santa-cruz-de-la-zarza/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7914-canal-de-castilla-presa-de-calahorra/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/7919-canal-de-castilla-tercera-retencion-ramal-norte-y-caseta-de-regulacion/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7925-castillo-de-los-duques-del-infantado/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7935-plaza-vieja-y-entorno/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/7961-iglesia-de-san-cornelio-y-san-cipriano/</loc></url>
@@ -755,11 +854,32 @@
   <url><loc>https://patrimonioabierto.es/monumento/8137-iglesia-de-santa-maria-la-blanca-sepulcros/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8163-iglesia-nuestra-senora-del-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8169-iglesia-parroquial-de-santa-columba/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8177-puente-del-moral/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8183-monasterio-de-santa-clara/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8191-canal-de-castilla-acueducto-de-prado-redondo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8196-canal-de-castilla-acueducto-de-salguero/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8201-canal-de-castilla-acueducto-del-cigarral/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8206-canal-de-castilla-esclusa-33-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8211-canal-de-castilla-esclusas-34-35-36-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8221-iglesia-de-santa-maria-la-mayor/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8229-acequia-de-antanillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8234-acequia-de-corbejones/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8239-canal-de-castilla-acueducto-de-antanillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8244-canal-de-castilla-acueducto-de-corbejones/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8249-acueducto-de-la-barquilla/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8254-canal-de-castilla-acueducto-de-las-palomas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8259-canal-de-castilla-acueducto-del-sereni/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8264-casa-del-rey/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8269-iglesia-de-san-juan/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8289-puente-de-villaumbrales/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8294-puente-de-cabanas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8300-castillo-de-las-cabanas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8305-acueducto-de-san-pedro/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8310-acueducto-de-valdealas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8320-puente-de-carrequemada/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8325-yacimiento-dolmen-de-la-velilla/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8335-canal-de-castilla-esclusa-15-ramal-norte/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/8340-canal-de-castilla-acueducto-de-vallarna/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8345-cueva-de-los-burros/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8349-iglesia-de-san-salvador/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8359-rollo-de-justicia-de-la-villa/</loc></url>
@@ -783,7 +903,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/8563-las-batuecas-cueva-del-cristo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8567-las-batuecas-umbria-del-canchal-del-cristo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8571-las-batuecas-abriguito-del-paseo/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/8583-las-batuecas-canchal-del-aguila/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8607-las-batuecas-risco-del-ciervo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8612-valle-de-las-batuecas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/8626-castillo/</loc></url>
@@ -842,10 +961,10 @@
   <url><loc>https://patrimonioabierto.es/monumento/9351-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9364-rollo-de-justicia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9369-castillo-de-monleon/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/9374-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9380-castillo-de-montemayor/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9385-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9395-iglesia-de-la-santa-cruz/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/9404-castillo-de-el-payo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9409-iglesia-parroquial/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9429-convento-de-las-carmelitas-descalzas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/9448-el-casco-antiguo/</loc></url>
@@ -1088,7 +1207,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/12329-arco-califal-o-puerta-del-cementerio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/12335-torre-de-la-muela/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/12340-torre-del-rollo/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/12351-torre-de-ribarroya/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/12356-torre-de-aldealpozo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/12362-torre-y-palacio-medieval/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/12369-rollo-de-justicia/</loc></url>
@@ -1319,6 +1437,8 @@
   <url><loc>https://patrimonioabierto.es/monumento/14420-puente-romano-y-calzada-romana-itinerario-no-17/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14431-iglesia-de-la-asuncion-de-nuestra-senora/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14448-rollo-de-justicia/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14467-canal-de-castilla-puente-de-cigales/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14472-puente-de-palazuelos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14477-la-ermita-las-arenas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14482-castillo-de-canillas-de-esgueva/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14487-iglesia-de-la-asuncion-de-nuestra-senora/</loc></url>
@@ -1327,10 +1447,15 @@
   <url><loc>https://patrimonioabierto.es/monumento/14526-iglesia-de-santa-maria-del-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14533-iglesia-de-la-asuncion/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14540-castro-recinto-amurallado/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14545-canal-de-castilla-acueducto-de-mucientes/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14550-canal-de-castilla-acueducto-de-sopena/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14555-iglesia-de-santiago/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14584-iglesia-parroquial-cogeces-de-iscar/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14598-monasterio-nuestra-senora-de-la-armedilla-ruinas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14603-monasterio-de-santa-maria-de-palazuelos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14610-canal-de-castilla-esclusa-40-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14615-canal-de-castilla-fabrica-de-harinas-esclusa-40-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14620-canal-de-castilla-esclusa-39-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14630-iglesia-de-san-justo-y-pastor/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14638-iglesia-santa-maria-del-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14645-castillo-de-abajo/</loc></url>
@@ -1357,10 +1482,12 @@
   <url><loc>https://patrimonioabierto.es/monumento/14826-palacio-real-de-los-reyes-catolicos-palacio-testamentario/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14832-iglesia-de-san-juan-bautista/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14839-convento-de-san-francisco/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14850-darsena-del-canal-en-medina-de-rioseco/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14855-la-ciudad/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14868-canal-de-castilla-fabricas-de-harinas-san-antonio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14873-iglesia-de-santa-maria-de-mediavilla/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14881-iglesia-de-santiago-apostol/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/14890-canal-de-castilla-puente-de-villalon-y-dique-seco/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14905-castillo-de-montealegre/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14910-la-villa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/14920-iglesia-de-san-martin/</loc></url>
@@ -1403,6 +1530,11 @@
   <url><loc>https://patrimonioabierto.es/monumento/15338-puente-de-simancas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15345-rollo-de-justicia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15350-sepulcro-megalitico-de-los-zumacales/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15355-canal-de-castilla-acueducto-del-sequillo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15360-canal-de-castilla-fabrica-de-harinas-esclusa-6-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15365-canal-de-castilla-fabrica-harinas-central-hidroelectrica-esclusa-7-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15370-canal-de-castilla-esclusa-6-ramal-de-campos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15375-canal-de-castilla-esclusa-7-ramal-de-campos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15386-castillo-de-tiedra/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15391-cerro-de-la-ermita/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15404-castillo-de-tordehumos/</loc></url>
@@ -1421,6 +1553,7 @@
   <url><loc>https://patrimonioabierto.es/monumento/15535-monasterio-de-santa-maria/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15569-iglesia-de-san-pedro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15601-zorita-las-quintanas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15606-canal-de-castilla-acueducto-del-berrocal/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15621-calle-juan-mambrilla-o-calle-francos/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15636-capilla-san-juan-bautista-iglesia-del-salvador/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15642-antigua-chancilleria-carcel-vieja/</loc></url>
@@ -1429,12 +1562,16 @@
   <url><loc>https://patrimonioabierto.es/monumento/15663-casa-del-sol-en-calle-san-gregorio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15671-casa-natal-de-jose-zorrilla/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15677-casco-antiguo-de-la-ciudad-de-valladolid/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15682-canal-de-castilla-central-hidroelectrica-esclusa-42-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15692-colegio-de-san-gregorio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15699-colegio-mayor-de-santa-cruz/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15712-convento-de-santa-isabel-iglesia-y-claustro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15720-convento-de-santa-teresa-m-m-carmelitas-descalzas/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15734-convento-de-santa-cruz-de-comendadoras-de-santiago/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15742-c-platerias-plaza-ochavo-e-iglesia-vera-cruz/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15747-canal-de-castilla-darsena-del-canal-en-valladolid/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15757-canal-de-castilla-esclusa-41-ramal-sur/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15762-canal-de-castilla-esclusa-42-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15778-fachada-a-c-san-ignacio-de-los-fernandez-de-muras-y-columnas-del-patio-original/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15784-fachada-y-atrio-de-la-universidad/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15801-fachadas-palacio-de-los-marqueses-de-valverde/</loc></url>
@@ -1451,6 +1588,7 @@
   <url><loc>https://patrimonioabierto.es/monumento/15957-iglesia-de-nuestra-senora-del-pilar/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15964-iglesia-y-convento-descalzas-reales/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15975-las-fuentes-de-argales/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/15987-canal-de-castilla-molino-en-esclusa-41-ramal-sur/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/15992-monasterio-madres-dominicas-de-santa-catalina/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16001-monasterio-de-nuestra-senora-de-prado/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16009-monasterio-de-san-joaquin-y-santa-ana/</loc></url>
@@ -1463,6 +1601,7 @@
   <url><loc>https://patrimonioabierto.es/monumento/16083-palacio-fabio-nelli-museo-de-valladolid/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16101-palacio-real/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16108-pasaje-gutierrez/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/16163-canal-de-castilla-talleres-darsena-de-valladolid/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16168-villa-romana-del-prado/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16180-yacimiento-del-soto-de-medinilla-edad-hierro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/16191-iglesia-parroquial-de-san-gines/</loc></url>
@@ -1574,7 +1713,7 @@
   <url><loc>https://patrimonioabierto.es/monumento/17331-iglesia-de-san-isidoro/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/17339-iglesia-de-san-leonardo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/17356-iglesia-de-santa-lucia/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/17364-iglesia-de-santa-maria-de-la-orta/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/17364-iglesia-de-santa-maria-de-la-horta/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/17371-iglesia-de-santa-maria-la-nueva/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/17378-iglesia-de-santiago-del-burgo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/17384-iglesia-de-santiago-el-viejo-o-de-los-caballeros/</loc></url>
@@ -1620,37 +1759,18 @@
   <url><loc>https://patrimonioabierto.es/monumento/138359-lera-i/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138373-lera-ii/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138387-lera-iii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138421-canchal-pizarra-ii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138436-canchal-pizarra-iii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138464-canchal-zarzalon-ii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138480-canchal-zarzalon-iii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138495-canchal-de-las-torre/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138511-umbria-canchal-crist/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138529-canchal-del-cristo/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138543-risco-del-ciervo/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138557-canchal-de-mahoma/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138565-canchal-de-villita/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138579-majadilla-las-torres/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138597-canchal-acerones/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138617-covacho-de-pallon-el/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138639-corral-de-morcilla/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138660-canchal-de-las-cabras-pintadas-i/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138695-canchal-de-la-pizarra-i/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138713-canchal-de-la-pizarra-ii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138732-canchal-de-la-pizarra-iii/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138750-canchal-del-zarzalon-i/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138770-canchal-del-zarzalon-ii/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138790-canchal-del-zarzalon-iii/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138810-canchal-de-las-torres-i/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138830-umbria-del-canchal-del-crist0/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138880-canchal-de-mahoma-i/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138912-majadilla-las-torres/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138928-palla-i-la/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/138943-palla-ii-la/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/138986-covachito-pequeno-del-cristo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/139012-canchal-de-las-cabras-pintadas-ii/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/139027-canchal-de-la-pizarra-iv/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/139042-canchal-de-la-pizarra-v/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/139057-canchal-del-zarzalon-iv/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/139072-hornacina-del-zarzalon/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/139087-canchal-del-zarzalon-vi/</loc></url>
@@ -1875,8 +1995,40 @@
   <url><loc>https://patrimonioabierto.es/monumento/479240-muralla/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/537393-conjunto-fortificado-de-haza/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/537485-iglesia-de-san-pedro/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537589-la-matecasa/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537628-dehesa-de-gallinero-i/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537638-el-corral-de-la-pena/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537639-santa-cruz-de-yanguas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537640-san-roque/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537641-las-adoberas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537642-la-pena/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537644-santa-cristina/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537645-la-dehesa/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537646-valloria-i/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537647-valloria-iii/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537648-valloria-iv/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537671-fuente-lacorte/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/537703-puente-colgante/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537782-la-laguna-i/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537786-el-frontal/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537787-el-majadal/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537788-el-royo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537790-fuentesalvo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537933-villaseca-32/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/537950-los-campos-iii/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538087-la-revilleja/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538088-el-salgar-de-sillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538089-la-losa-i/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538090-la-losa-ii/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538092-las-costanillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538093-las-palomeras/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538094-los-tormos/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538095-serrantes-i/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/538263-dehesa-de-gallinero-ii/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/538616-hoyita-del-coscorron-i/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/539158-iglesia-de-san-lesmes-abad/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/539166-puente-sobre-el-rio-vena-frente-a-la-puerta-de-san-juan/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/539170-puerta-de-san-juan/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/539482-antiguas-tenerias-del-arrabal-de-san-segundo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/539494-complejo-minero-de-puras-villafranca/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/539518-monasterio-de-fresdelval/</loc></url>
@@ -1899,6 +2051,13 @@
   <url><loc>https://patrimonioabierto.es/monumento/546574-la-vega/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/547021-cueva-hermeja/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/547161-barranco-del-arroyo-de-la-pallejera/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562130-la-pedraja/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562134-costalomo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562138-el-frontal/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562143-pena-unor/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562147-pena-unor-ii/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562151-camino-de-moncalvillo/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/562155-el-frontal-ii/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/562159-crucero/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/562170-casa-rectoral-con-escudo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/705681-horreo-balboa-04/</loc></url>
@@ -1936,7 +2095,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/817100-castillo-de-luna/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/817106-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/817120-castillo-de-monteagudo/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/817133-torre-de-valdelugueros/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/817521-castillo-de-alba/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/817525-castillo-de-gordon/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/817534-castillo-de-la-falamosa-o-de-muqui/</loc></url>
@@ -2356,11 +2514,9 @@
   <url><loc>https://patrimonioabierto.es/monumento/875941-torre-de-san-martin-de-losa/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/875945-torre-de-los-sarabia-de-rueda/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/875949-torre-de-san-martin-o-palacio-del-inquisidor/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/879459-castillo-penasalona/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879469-torre-de-torrestio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879508-torre-de-riano/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879512-torre/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/879533-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879546-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879587-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879603-castillo-de-monteagudo/</loc></url>
@@ -2370,7 +2526,6 @@
   <url><loc>https://patrimonioabierto.es/monumento/879723-castillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879732-castillo-del-griego-arquitectonico/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879743-murallas/</loc></url>
-  <url><loc>https://patrimonioabierto.es/monumento/879770-torre/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879821-palacio-de-los-quinones/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879832-crucero-de-santo-toribio/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/879836-castillo/</loc></url>
@@ -2476,6 +2631,7 @@
   <url><loc>https://patrimonioabierto.es/monumento/2887530-picota-de-madera/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2894100-muralla-de-retortillo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2895197-atalaya-de-neguillas/</loc></url>
+  <url><loc>https://patrimonioabierto.es/monumento/2895258-conjunto-de-la-mineria-del-wolframio-de-la-pena-del-seo/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2895389-rollo-de-justicia/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2910161-puerta-de-santa-catalina/</loc></url>
   <url><loc>https://patrimonioabierto.es/monumento/2927718-ruinas-del-torrejon/</loc></url>

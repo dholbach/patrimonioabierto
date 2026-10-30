@@ -41,7 +41,7 @@
       -4.804108,
       42.071617
     ],
-    "monument_count": 1,
+    "monument_count": 4,
     "linked_count": 1
   },
   {
@@ -371,7 +371,7 @@
       -4.263873,
       42.739602
     ],
-    "monument_count": 5,
+    "monument_count": 9,
     "linked_count": 5
   },
   {
@@ -686,8 +686,8 @@
       -2.284798,
       41.697241
     ],
-    "monument_count": 1,
-    "linked_count": 1
+    "monument_count": 0,
+    "linked_count": 0
   },
   {
     "name": "Aldealcorvo",
@@ -1301,7 +1301,7 @@
       -2.393622,
       42.017115
     ],
-    "monument_count": 5,
+    "monument_count": 7,
     "linked_count": 5
   },
   {
@@ -1511,7 +1511,7 @@
       -4.365078,
       42.216086
     ],
-    "monument_count": 2,
+    "monument_count": 5,
     "linked_count": 2
   },
   {
@@ -1856,8 +1856,8 @@
       -5.549041,
       42.484651
     ],
-    "monument_count": 1,
-    "linked_count": 1
+    "monument_count": 0,
+    "linked_count": 0
   },
   {
     "name": "Arenas de San Pedro",
@@ -2921,7 +2921,7 @@
       -4.538945,
       42.172724
     ],
-    "monument_count": 4,
+    "monument_count": 13,
     "linked_count": 4
   },
   {
@@ -2981,7 +2981,7 @@
       -4.949587,
       41.966683
     ],
-    "monument_count": 1,
+    "monument_count": 2,
     "linked_count": 1
   },
   {
@@ -3581,7 +3581,7 @@
       -4.301512,
       42.299943
     ],
-    "monument_count": 2,
+    "monument_count": 5,
     "linked_count": 2
   },
   {
@@ -3806,8 +3806,8 @@
       -5.196963,
       42.991173
     ],
-    "monument_count": 8,
-    "linked_count": 8
+    "monument_count": 7,
+    "linked_count": 7
   },
   {
     "name": "Brabos",
@@ -4166,7 +4166,7 @@
       -3.585338,
       42.404284
     ],
-    "monument_count": 33,
+    "monument_count": 36,
     "linked_count": 33
   },
   {
@@ -4511,7 +4511,7 @@
       -4.535871,
       41.763454
     ],
-    "monument_count": 1,
+    "monument_count": 3,
     "linked_count": 1
   },
   {
@@ -4541,7 +4541,7 @@
       -3.19773,
       41.951858
     ],
-    "monument_count": 1,
+    "monument_count": 2,
     "linked_count": 1
   },
   {
@@ -4646,8 +4646,8 @@
       -6.069967,
       43.049547
     ],
-    "monument_count": 11,
-    "linked_count": 11
+    "monument_count": 10,
+    "linked_count": 10
   },
   {
     "name": "Cabrillas",
@@ -5261,7 +5261,7 @@
       -4.860953,
       42.034779
     ],
-    "monument_count": 0,
+    "monument_count": 4,
     "linked_count": 0
   },
   {
@@ -5966,7 +5966,7 @@
       -4.924616,
       42.017916
     ],
-    "monument_count": 1,
+    "monument_count": 3,
     "linked_count": 1
   },
   {
@@ -6206,7 +6206,7 @@
       -4.237895,
       42.581668
     ],
-    "monument_count": 0,
+    "monument_count": 1,
     "linked_count": 0
   },
   {
@@ -6461,7 +6461,7 @@
       -4.77345,
       42.062369
     ],
-    "monument_count": 0,
+    "monument_count": 2,
     "linked_count": 0
   },
   {
@@ -7241,7 +7241,7 @@
       -4.650217,
       41.826325
     ],
-    "monument_count": 1,
+    "monument_count": 3,
     "linked_count": 1
   },
   {
@@ -7886,7 +7886,7 @@
       -4.58521,
       41.854517
     ],
-    "monument_count": 1,
+    "monument_count": 2,
     "linked_count": 1
   },
   {
@@ -7991,7 +7991,7 @@
       -6.777108,
       42.621702
     ],
-    "monument_count": 3,
+    "monument_count": 4,
     "linked_count": 3
   },
   {
@@ -8201,7 +8201,7 @@
       -4.56397,
       41.851231
     ],
-    "monument_count": 0,
+    "monument_count": 1,
     "linked_count": 0
   },
   {
@@ -8651,7 +8651,7 @@
       -4.468709,
       41.931348
     ],
-    "monument_count": 4,
+    "monument_count": 11,
     "linked_count": 4
   },
   {
@@ -9086,8 +9086,8 @@
       -6.677678,
       40.355963
     ],
-    "monument_count": 1,
-    "linked_count": 1
+    "monument_count": 0,
+    "linked_count": 0
   },
   {
     "name": "El Pedroso de la Armuña",
@@ -9176,7 +9176,7 @@
       -2.576521,
       42.015796
     ],
-    "monument_count": 3,
+    "monument_count": 4,
     "linked_count": 3
   },
   {
@@ -10391,7 +10391,7 @@
       -4.358772,
       42.315164
     ],
-    "monument_count": 2,
+    "monument_count": 10,
     "linked_count": 2
   },
   {
@@ -10871,7 +10871,7 @@
       -4.709103,
       42.146941
     ],
-    "monument_count": 2,
+    "monument_count": 4,
     "linked_count": 2
   },
   {
@@ -11741,7 +11741,7 @@
       -4.545977,
       42.082684
     ],
-    "monument_count": 0,
+    "monument_count": 6,
     "linked_count": 0
   },
   {
@@ -12071,7 +12071,7 @@
       -4.242594,
       42.64997
     ],
-    "monument_count": 1,
+    "monument_count": 11,
     "linked_count": 1
   },
   {
@@ -12626,7 +12626,7 @@
       -4.508699,
       42.119953
     ],
-    "monument_count": 1,
+    "monument_count": 3,
     "linked_count": 1
   },
   {
@@ -13091,7 +13091,7 @@
       -6.07048,
       40.512817
     ],
-    "monument_count": 59,
+    "monument_count": 39,
     "linked_count": 3
   },
   {
@@ -14201,7 +14201,7 @@
       -4.256777,
       42.358578
     ],
-    "monument_count": 0,
+    "monument_count": 1,
     "linked_count": 0
   },
   {
@@ -14246,7 +14246,7 @@
       -2.326821,
       42.042417
     ],
-    "monument_count": 0,
+    "monument_count": 6,
     "linked_count": 0
   },
   {
@@ -15161,7 +15161,7 @@
       -3.438744,
       42.150271
     ],
-    "monument_count": 1,
+    "monument_count": 2,
     "linked_count": 1
   },
   {
@@ -15941,7 +15941,7 @@
       -4.884922,
       41.939456
     ],
-    "monument_count": 5,
+    "monument_count": 7,
     "linked_count": 5
   },
   {
@@ -16046,8 +16046,8 @@
       -4.169961,
       42.516795
     ],
-    "monument_count": 2,
-    "linked_count": 2
+    "monument_count": 8,
+    "linked_count": 3
   },
   {
     "name": "Melgar de Tera",
@@ -16781,7 +16781,7 @@
       -5.817597,
       40.608835
     ],
-    "monument_count": 1,
+    "monument_count": 2,
     "linked_count": 1
   },
   {
@@ -18686,8 +18686,8 @@
       -6.893769,
       42.591985
     ],
-    "monument_count": 2,
-    "linked_count": 2
+    "monument_count": 1,
+    "linked_count": 1
   },
   {
     "name": "Ojos-Albos",
@@ -19031,7 +19031,7 @@
       -4.316406,
       42.463411
     ],
-    "monument_count": 2,
+    "monument_count": 8,
     "linked_count": 2
   },
   {
@@ -19421,7 +19421,7 @@
       -4.481767,
       42.071213
     ],
-    "monument_count": 16,
+    "monument_count": 23,
     "linked_count": 16
   },
   {
@@ -19571,7 +19571,7 @@
       -4.590574,
       42.241749
     ],
-    "monument_count": 1,
+    "monument_count": 10,
     "linked_count": 1
   },
   {
@@ -20576,7 +20576,7 @@
       -4.416576,
       42.235181
     ],
-    "monument_count": 0,
+    "monument_count": 3,
     "linked_count": 0
   },
   {
@@ -22136,7 +22136,7 @@
       -2.931684,
       42.020588
     ],
-    "monument_count": 0,
+    "monument_count": 2,
     "linked_count": 0
   },
   {
@@ -22271,7 +22271,7 @@
       -4.302739,
       42.327526
     ],
-    "monument_count": 0,
+    "monument_count": 1,
     "linked_count": 0
   },
   {
@@ -22526,7 +22526,7 @@
       -4.485535,
       42.179701
     ],
-    "monument_count": 1,
+    "monument_count": 6,
     "linked_count": 1
   },
   {
@@ -23216,7 +23216,7 @@
       -3.225118,
       42.101424
     ],
-    "monument_count": 2,
+    "monument_count": 5,
     "linked_count": 2
   },
   {
@@ -23546,7 +23546,7 @@
       -4.473464,
       42.239684
     ],
-    "monument_count": 1,
+    "monument_count": 4,
     "linked_count": 1
   },
   {
@@ -24416,7 +24416,7 @@
       -2.107632,
       42.10527
     ],
-    "monument_count": 1,
+    "monument_count": 6,
     "linked_count": 1
   },
   {
@@ -25001,7 +25001,7 @@
       -2.421085,
       42.10041
     ],
-    "monument_count": 0,
+    "monument_count": 2,
     "linked_count": 0
   },
   {
@@ -26786,7 +26786,7 @@
       -4.97149,
       42.024383
     ],
-    "monument_count": 0,
+    "monument_count": 5,
     "linked_count": 0
   },
   {
@@ -27791,7 +27791,7 @@
       -4.605483,
       41.870711
     ],
-    "monument_count": 1,
+    "monument_count": 2,
     "linked_count": 1
   },
   {
@@ -28451,8 +28451,8 @@
       -5.338204,
       43.055549
     ],
-    "monument_count": 1,
-    "linked_count": 1
+    "monument_count": 0,
+    "linked_count": 0
   },
   {
     "name": "Valdemaluque",
@@ -28886,7 +28886,7 @@
       -4.630816,
       41.815509
     ],
-    "monument_count": 47,
+    "monument_count": 54,
     "linked_count": 47
   },
   {
@@ -31421,7 +31421,7 @@
       -4.455486,
       41.992258
     ],
-    "monument_count": 2,
+    "monument_count": 7,
     "linked_count": 2
   },
   {
@@ -31586,7 +31586,7 @@
       -4.983289,
       41.947228
     ],
-    "monument_count": 0,
+    "monument_count": 1,
     "linked_count": 0
   },
   {
@@ -32081,7 +32081,7 @@
       -2.273643,
       42.139575
     ],
-    "monument_count": 0,
+    "monument_count": 12,
     "linked_count": 0
   },
   {
@@ -32681,7 +32681,7 @@
       -4.556521,
       42.115479
     ],
-    "monument_count": 1,
+    "monument_count": 10,
     "linked_count": 1
   },
   {
@@ -33356,7 +33356,7 @@
       -2.269589,
       42.146706
     ],
-    "monument_count": 2,
+    "monument_count": 3,
     "linked_count": 2
   },
   {
@@ -33626,8 +33626,8 @@
       -3.190416,
       42.620028
     ],
-    "monument_count": 1,
-    "linked_count": 1
+    "monument_count": 0,
+    "linked_count": 0
   },
   {
     "name": "Ágreda",
@@ -33656,8 +33656,8 @@
       -4.453613,
       40.753667
     ],
-    "monument_count": 44,
-    "linked_count": 44
+    "monument_count": 43,
+    "linked_count": 43
   },
   {
     "name": "Éjeme",
