@@ -34,7 +34,15 @@ def wfs_get_feature(base_url, workspace, typename, extra=None):
     url = f"{base_url}/{workspace}/wfs?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=120) as resp:
-        return json.load(resp)
+        body = resp.read()
+    # When JCyL's GeoServer is struggling it answers 200 with an error page
+    # or an OGC exception instead of GeoJSON - fail with what it said rather
+    # than a bare JSONDecodeError.
+    try:
+        return json.loads(body)
+    except ValueError:
+        snippet = body[:500].decode("utf-8", "replace")
+        raise SystemExit(f"{typename}: expected GeoJSON, got:\n{snippet}") from None
 
 
 def main():
