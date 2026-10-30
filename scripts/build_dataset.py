@@ -49,14 +49,18 @@ def titlecase_es(name):
 
 
 def normalize_protection_date(iso_str):
-    """f_bien_protec arrives as e.g. "1844-08-27T23:00:00Z" - a UTC
-    timestamp for local midnight, so whenever the UTC hour is 22-23 the
-    *local* calendar date is one day later. Approximate fix: bump the date
-    by a day in that case. (Matches the date Wikidata's own P1435 qualifier
-    already carries for e.g. León Cathedral - verified during development.)
+    """f_proteccion (f_bien_protec before JCyL's Oct 2026 schema change)
+    has arrived as e.g. "1844-08-27T23:00:00Z" - a UTC timestamp for local
+    midnight, so whenever the UTC hour is 22-23 the *local* calendar date is
+    one day later. Approximate fix: bump the date by a day in that case.
+    (Matches the date Wikidata's own P1435 qualifier already carries for
+    e.g. León Cathedral - verified during development.) A plain date
+    ("1844-08-28" or GeoServer's "1844-08-28Z") is taken as-is.
     """
     if not iso_str:
         return None
+    if "T" not in iso_str:
+        return datetime.strptime(iso_str[:10], "%Y-%m-%d").strftime("%Y-%m-%d")
     dt = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%SZ")
     if dt.hour >= 22:
         dt += timedelta(days=1)
@@ -280,8 +284,8 @@ def main():
             {
                 "jcyl_id": p["c_bien_id"],
                 "name": titlecase_es(p["d_bien_denom"]),
-                "category": p["d_categ_adquiere"],
-                "protection_date": normalize_protection_date(p["f_bien_protec"]),
+                "category": p["d_categ_prot"],
+                "protection_date": normalize_protection_date(p["f_proteccion"]),
                 "lat": round(lat, 6),
                 "lon": round(lon, 6),
                 "municipality": muni_props["n_mun"],
