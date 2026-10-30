@@ -49,17 +49,29 @@ def titlecase_es(name):
 
 
 def normalize_protection_date(iso_str):
-    """f_bien_protec arrives as e.g. "1844-08-27T23:00:00Z" - a UTC
-    timestamp for local midnight, so whenever the UTC hour is 22-23 the
-    *local* calendar date is one day later. Approximate fix: bump the date
-    by a day in that case. (Matches the date Wikidata's own P1435 qualifier
-    already carries for e.g. León Cathedral - verified during development.)
+    """f_proteccion (formerly f_bien_protec) is the layer's protection date
+    in one of two shapes, depending on when JCyL last changed the feed:
+
+    - "1844-08-27T23:00:00Z" (old): a UTC timestamp for local midnight, so
+      whenever the UTC hour is 22-23 the *local* calendar date is one day
+      later. Bump the date by a day in that case. (Matches the date
+      Wikidata's own P1435 qualifier already carries for e.g. Leon
+      Cathedral - verified during development.)
+    - "1844-08-27Z" (current): the same timestamp with the time cut off,
+      i.e. the UTC date, which is one day *behind* the real one for almost
+      every record (2248 of 2448 compared against the old format; the
+      other 200 had a UTC hour below 22 and so were never shifted). The
+      time is gone, so the two cases can't be told apart - always bump,
+      right for the 92% majority.
     """
     if not iso_str:
         return None
-    dt = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%SZ")
-    if dt.hour >= 22:
-        dt += timedelta(days=1)
+    if "T" in iso_str:
+        dt = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%SZ")
+        if dt.hour >= 22:
+            dt += timedelta(days=1)
+    else:
+        dt = datetime.strptime(iso_str, "%Y-%m-%dZ") + timedelta(days=1)
     return dt.strftime("%Y-%m-%d")
 
 
@@ -280,8 +292,10 @@ def main():
             {
                 "jcyl_id": p["c_bien_id"],
                 "name": titlecase_es(p["d_bien_denom"]),
-                "category": p["d_categ_adquiere"],
-                "protection_date": normalize_protection_date(p["f_bien_protec"]),
+                # d_categ_prot, formerly d_categ_adquiere - JCyL renamed it
+                # (and f_bien_protec -> f_proteccion below) in the WFS layer.
+                "category": p["d_categ_prot"],
+                "protection_date": normalize_protection_date(p["f_proteccion"]),
                 "lat": round(lat, 6),
                 "lon": round(lon, 6),
                 "municipality": muni_props["n_mun"],

@@ -24,6 +24,8 @@ const CATEGORY_ICONS = {
   'PAISAJE CULTURAL': '🌄',
   'JARDÍN HISTÓRICO': '🌳',
   'HITOS FORALES': '🪧',
+  'CONJUNTO INDUSTRIAL': '🏭',
+  'INMUEBLES ASOCIADOS A LA DECLARACIÓN': '🔗',
 };
 const DEFAULT_ICON = '📌';
 
@@ -49,6 +51,8 @@ const CATEGORY_SLUGS = {
   'PAISAJE CULTURAL': 'pai',
   'JARDÍN HISTÓRICO': 'jar',
   'HITOS FORALES': 'hit',
+  'CONJUNTO INDUSTRIAL': 'ind',
+  'INMUEBLES ASOCIADOS A LA DECLARACIÓN': 'ina',
 };
 const SLUG_TO_CATEGORY = Object.fromEntries(Object.entries(CATEGORY_SLUGS).map(([cat, slug]) => [slug, cat]));
 
