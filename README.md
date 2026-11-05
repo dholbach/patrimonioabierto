@@ -79,6 +79,15 @@ without a redirect.
 make wiki-extracts && make monument-pages
 ```
 
+The same step writes listing pages: `/provincia/<province>/` for each of the
+nine provinces and `/provincia/<province>/<category>/` ("Castillos en
+Burgos") for every province and category with at least five monuments. They
+list their monuments as plain links, so every monument page is reachable
+from somewhere a crawler can follow, and carry breadcrumbs (also as
+schema.org `BreadcrumbList`) back up to them. `app.js` keeps their content
+when it boots instead of replacing it, and filters the map to the page's
+category.
+
 Re-run after a `make build` that changed coverage, or `monument-pages`
 alone after editing the page shell. Neither is part of `make build`: the
 extract fetch alone is several hundred Wikipedia requests, not something to

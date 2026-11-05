@@ -1975,7 +1975,14 @@ body:has(#map-wrap.contribute-bar-visible.potw-visible) #toast { bottom: 188px; 
    plain <ul> of links to neighbouring monuments in the HTML, for crawlers
    and no-JS visitors. app.js replaces the whole panel once it boots, so this
    is only ever seen before that - just keep it from looking like a raw list. */
-.nearby-links { list-style: none; margin: 0; padding: 0; }
-.nearby-links li { padding: 8px 0; border-top: 1px solid var(--border, rgba(0,0,0,.08)); }
-.nearby-links a { color: inherit; text-decoration: none; font-weight: 500; }
-.nearby-links a:hover { text-decoration: underline; }
+.page-links { list-style: none; margin: 0; padding: 0; }
+.page-links li { padding: 8px 0; border-top: 1px solid var(--border, rgba(0,0,0,.08)); }
+.page-links a { color: inherit; text-decoration: none; font-weight: 500; }
+.page-links a:hover { text-decoration: underline; }
+.meta-link { color: inherit; }
+.crumbs { font-size: 13px; color: var(--ink-soft); margin-bottom: 10px; }
+.crumbs a { color: inherit; }
+.panel-body h2 { font-family: var(--font-display); font-size: 17px; margin: 22px 0 6px; color: var(--cyl-purple-dark); }
+.panel-body .summary { margin: 10px 0; }
+#welcome-provinces { margin: 0 0 14px; font-size: 13px; color: var(--ink-soft); }
+#welcome-provinces a { color: inherit; margin-right: 8px; white-space: nowrap; }

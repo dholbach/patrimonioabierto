@@ -118,6 +118,12 @@
       <div id="welcome-logo-badge"><img src="assets/logo.png" alt="" id="welcome-logo"></div>
       <h2 data-i18n="welcome.title">Bienvenido a Patrimonio Abierto</h2>
       <p data-i18n="welcome.body">Aquí encontrarás todos los Bienes de Interés Cultural (BIC) declarados oficialmente en Castilla y León, junto con información y material multimedia de Wikidata, Wikipedia y Wikimedia Commons. Un proyecto libre, sin cuentas ni anuncios.</p>
+      <!-- Plain links into the per-province pages, so the homepage - and every
+           page built from this shell - leads a crawler to them. -->
+      <nav id="welcome-provinces" aria-label="Provincias"><span data-i18n="welcome.provinces">Explorar por provincia:</span>
+        <a href="/provincia/avila/">Ávila</a> <a href="/provincia/burgos/">Burgos</a> <a href="/provincia/leon/">León</a>
+        <a href="/provincia/palencia/">Palencia</a> <a href="/provincia/salamanca/">Salamanca</a> <a href="/provincia/segovia/">Segovia</a>
+        <a href="/provincia/soria/">Soria</a> <a href="/provincia/valladolid/">Valladolid</a> <a href="/provincia/zamora/">Zamora</a></nav>
       <button type="button" id="welcome-close-btn" data-i18n="welcome.cta">Empezar a explorar</button>
       <a href="#" id="welcome-about-link" data-i18n="welcome.about_link">Más sobre el proyecto</a>
     </div>

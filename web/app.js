@@ -924,7 +924,13 @@ function heroKicker(record) {
 }
 
 function bodyMetaLine(record) {
-  let line = `${record.municipality} · ${record.province}`;
+  // The province is a real link to its static page (/provincia/<slug>/, see
+  // scripts/build_monument_pages.py), not just text: this panel replaces the
+  // static page's own content once the app boots, and this keeps a link up to
+  // the province in what a crawler that runs the script ends up with. A plain
+  // click opens the in-app province panel instead (the handler below).
+  const province = `<a class="meta-link" href="/provincia/${slugify(record.province)}/" data-province="${record.province}">${record.province}</a>`;
+  let line = `${record.municipality} · ${province}`;
   if (record.protection_date) {
     line += ` · ${t('protection.since')} ${record.protection_date}`;
   }
@@ -2571,6 +2577,43 @@ function provinceShareUrl(prov) {
   return url.toString();
 }
 
+// /provincia/<province>/ and /provincia/<province>/<category>/ are static
+// pages (scripts/build_monument_pages.py) that arrive with their listing
+// already in the panel as plain HTML. That HTML is the page's content: a
+// crawler that runs this script should still find its links, so it is kept
+// rather than replaced by showProvincePanel()'s own, link-less rows. All that
+// is left to do is bring the map in line (the province in view, only that
+// category's markers) and make the listed monuments open in-app, like every
+// other list does.
+function openStaticListing(provinceName, categoryName) {
+  const prov = allProvinces.find((p) => p.name === provinceName);
+  if (prov) currentPanelState = { type: 'province', prov };
+  if (categoryName && categoriesWithCounts.some((c) => c.category === categoryName)) selectOnlyCategory(categoryName);
+  wireMonumentListRows(panelContentEl);
+  openPanel(() => {
+    if (prov) map.fitBounds(bboxToLeafletBounds(prov.bbox), { padding: [40, 40] });
+  });
+}
+
+function selectOnlyCategory(category) {
+  filterListEl.querySelectorAll('.filter-row').forEach((row) => {
+    const on = row.dataset.category === category;
+    row.querySelector('input').checked = on;
+    row.classList.toggle('unchecked', !on);
+  });
+  selectedCategories = new Set([category]);
+  applyFilters();
+}
+
+panelContentEl.addEventListener('click', (e) => {
+  const link = e.target.closest('a[data-province]');
+  if (!link || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  const prov = allProvinces.find((p) => p.name === link.dataset.province);
+  if (!prov) return;
+  e.preventDefault();
+  showProvincePanel(prov, { flyTo: true });
+});
+
 function showProvincePanel(prov, { flyTo = false, updateUrl = true } = {}) {
   currentPanelState = { type: 'province', prov };
 
@@ -3336,14 +3379,17 @@ Promise.all([
     const requestedPage =
       WRITTEN_PAGE_TYPES.find((type) => location.pathname === `/${type}/`) ||
       (WRITTEN_PAGE_TYPES.includes(hashPage) ? hashPage : null);
-    const hasDeepLink = !!(requestedId || requestedMuni || requestedProv || requestedPage);
+    const staticProvince = panelContentEl.dataset.staticProvince;
+    const hasDeepLink = !!(requestedId || requestedMuni || requestedProv || requestedPage || staticProvince);
     // Same reasoning as maybeShowWelcome() below: someone landing on a
     // specific monument/municipality/province/static page came for that
     // page, not the map's own landing view - a card advertising an
     // unrelated monument, floating over a map they may not even look at
     // this visit, doesn't belong there.
     if (!hasDeepLink) initPictureOfTheWeek();
-    if (requestedId && recordsById.has(requestedId)) {
+    if (staticProvince) {
+      openStaticListing(staticProvince, panelContentEl.dataset.staticCategory);
+    } else if (requestedId && recordsById.has(requestedId)) {
       selectMonument(recordsById.get(requestedId), { flyTo: true, updateUrl: false });
     } else if (requestedMuni) {
       const muni = allMunicipalities.find((m) => m.ine_code_p772 === requestedMuni);

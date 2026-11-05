@@ -68,6 +68,7 @@ const STRINGS = {
     'welcome.body':
       'Aquí encontrarás todos los Bienes de Interés Cultural (BIC) declarados oficialmente en Castilla y León, junto con información y material multimedia de Wikidata, Wikipedia y Wikimedia Commons. Un proyecto libre, sin cuentas ni anuncios.',
     'welcome.cta': 'Empezar a explorar',
+    'welcome.provinces': 'Explorar por provincia:',
     'welcome.about_link': 'Más sobre el proyecto',
     'about.title': 'Acerca de Patrimonio Abierto',
     'about.intro': (linked, total, pct) =>
@@ -283,6 +284,7 @@ const STRINGS = {
     'welcome.body':
       "Here you'll find every officially declared Heritage Site (BIC) in Castile and León, along with information and media from Wikidata, Wikipedia and Wikimedia Commons. A free project - no accounts, no ads.",
     'welcome.cta': 'Start exploring',
+    'welcome.provinces': 'Browse by province:',
     'welcome.about_link': 'More about the project',
     'about.title': 'About Patrimonio Abierto',
     'about.intro': (linked, total, pct) =>
