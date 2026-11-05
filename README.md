@@ -25,7 +25,7 @@ than blended into one call:
 ## Pipeline
 
 ```
-make fetch           # scripts/fetch_jcyl.py + fetch_wikidata.py -> data/raw/*.json
+make fetch           # scripts/fetch_jcyl.py + fetch_wikidata.py + fetch_wikidata_labels.py -> data/raw/*.json
 make build           # scripts/build_dataset.py -> web/data/cyl_monuments_wikidata.json
 make wiki-extracts    # scripts/fetch_wikipedia_extracts.py -> data/raw/wikipedia_extracts.json (optional, feeds monument-pages)
 make monument-pages   # scripts/build_monument_pages.py -> web/monumento/*/index.html + sitemap.xml/robots.txt

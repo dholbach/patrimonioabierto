@@ -9,10 +9,15 @@ Two things come out of it that the JCyL catalogue cannot give:
 - the aliases are the other names the same monument goes by, which is what
   someone searching for it may type instead of the catalogue's name.
 
-build_monument_pages.py puts both into each page's HTML and JSON-LD.
+build_dataset.py takes the accents from the label (see names.py), and
+build_monument_pages.py puts the aliases into each page's HTML and JSON-LD.
+
+Runs as part of `make fetch`, after fetch_wikidata.py and before the build:
+it reads the QIDs from that query's raw result, not from the built dataset,
+so the build can use the labels of the same run.
 
 Run: python3 scripts/fetch_wikidata_labels.py
-Needs: web/data/cyl_monuments_wikidata.json (scripts/build_dataset.py)
+Needs: data/raw/wikidata_p3177.json (scripts/fetch_wikidata.py)
 Writes: data/raw/wikidata_labels.json - {jcyl_id: {"qid", "label", "aliases"}}
         for every linked monument that has a Spanish label. Rewritten from
         scratch on each run (about 45 requests, 50 items each): unlike a
@@ -29,7 +34,7 @@ import urllib.request
 from project import user_agent
 
 RAW_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
-DATASET_FILE = os.path.join(os.path.dirname(__file__), "..", "web", "data", "cyl_monuments_wikidata.json")
+P3177_FILE = os.path.join(RAW_DIR, "wikidata_p3177.json")
 OUT_FILE = os.path.join(RAW_DIR, "wikidata_labels.json")
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 UA = user_agent("patrimonioabierto-labels")
@@ -52,14 +57,14 @@ def api_get(url, retries=4):
 
 
 def main():
-    records = json.load(open(DATASET_FILE, encoding="utf-8"))
-    # Same exclusion as fetch_wikipedia_extracts.py: a multi-QID conflict has
-    # no single right item to take a label from.
-    by_qid = {}
-    for r in records:
-        q = r["wikidata_qid"]
-        if r["already_linked"] and not r["wikidata_conflict"] and q:
-            by_qid[q[0] if isinstance(q, list) else q] = r["jcyl_id"]
+    rows = json.load(open(P3177_FILE, encoding="utf-8"))["results"]["bindings"]
+    qids_by_jcyl = {}
+    for row in rows:
+        jcyl_id = row["jcylID"]["value"].strip()
+        qids_by_jcyl.setdefault(jcyl_id, set()).add(row["item"]["value"].rsplit("/", 1)[-1])
+    # Same exclusion as fetch_wikipedia_extracts.py: an id claimed by several
+    # items is a conflict, with no single right item to take a label from.
+    by_qid = {next(iter(qs)): jcyl_id for jcyl_id, qs in qids_by_jcyl.items() if len(qs) == 1}
     qids = sorted(by_qid)
     print(f"{len(qids)} linked monuments")
 

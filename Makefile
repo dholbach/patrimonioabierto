@@ -30,6 +30,7 @@ help:
 fetch:
 	@python3 scripts/fetch_jcyl.py
 	@python3 scripts/fetch_wikidata.py
+	@python3 scripts/fetch_wikidata_labels.py
 
 build:
 	@cd scripts && python3 build_dataset.py

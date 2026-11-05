@@ -15,6 +15,7 @@ from geometry import (
     multipolygon_coordinates,
     point_in_multipolygon,
 )
+from names import ACCENTED, WORD, build_corpus, restore_accents
 
 RAW_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 WEB_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "web", "data")
@@ -22,6 +23,9 @@ WEB_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "web", "data")
 # frontend fetches, not separate build artifacts that need copying over.
 OUT_PATH = os.path.join(WEB_DATA_DIR, "cyl_monuments_wikidata.json")
 MUNICIPALITIES_PATH = os.path.join(WEB_DATA_DIR, "municipalities.json")
+# fetch_wikidata_labels.py's output (optional: without it names are simply
+# not accent-corrected, see names.py).
+LABELS_PATH = os.path.join(RAW_DIR, "wikidata_labels.json")
 PROVINCES_PATH = os.path.join(WEB_DATA_DIR, "provinces.json")
 HISTORY_PATH = os.path.join(WEB_DATA_DIR, "history.json")
 PHOTO_COUNTS_RAW_PATH = os.path.join(RAW_DIR, "commons_photo_counts.json")
@@ -277,6 +281,22 @@ def main():
         if row.get("image") and jcyl_id not in wd_image_url_by_jcyl:
             wd_image_url_by_jcyl[jcyl_id] = row["image"]["value"]
 
+    # Names come out of JCyL in capitals without accents; see names.py. The
+    # dictionary it falls back on is made of words somebody wrote with their
+    # accents: Wikidata's Spanish labels, the municipality and province names,
+    # and any accented word JCyL itself used.
+    labels = json.load(open(LABELS_PATH, encoding="utf-8")) if os.path.exists(LABELS_PATH) else {}
+    jcyl_names = {str(f["properties"]["c_bien_id"]): titlecase_es(f["properties"]["d_bien_denom"]) for f in monuments}
+    corpus = build_corpus(
+        [entry["label"] for entry in labels.values()]
+        + [m["props"]["n_mun"] + " " + m["props"]["n_prov"] for m in indexed_munis]
+        # Only the accented words themselves: the rest of such a name is
+        # JCyL's own accent-less spelling, which is the thing being fixed and
+        # must not count as evidence for itself.
+        + [" ".join(w for w in WORD.findall(name) if ACCENTED.search(w)) for name in jcyl_names.values()]
+    )
+    names_fixed = {"label": 0, "dictionary": 0}
+
     records = []
     approx_count = 0
     for f in monuments:
@@ -287,11 +307,15 @@ def main():
         if approx:
             approx_count += 1
         wd_qids = wd_by_jcyl.get(cid, [])
+        label = labels.get(cid, {}).get("label")
+        name, how = restore_accents(jcyl_names[cid], label, corpus)
+        if how:
+            names_fixed[how] += 1
 
         records.append(
             {
                 "jcyl_id": p["c_bien_id"],
-                "name": titlecase_es(p["d_bien_denom"]),
+                "name": name,
                 # d_categ_prot, formerly d_categ_adquiere - JCyL renamed it
                 # (and f_bien_protec -> f_proteccion below) in the WFS layer.
                 "category": p["d_categ_prot"],
@@ -320,6 +344,7 @@ def main():
             }
         )
 
+    print(f"names with accents restored: {names_fixed['label']} from Wikidata labels, {names_fixed['dictionary']} from the dictionary")
     records.sort(key=lambda r: r["jcyl_id"])
     json.dump(records, open(OUT_PATH, "w"), ensure_ascii=False, indent=2)
 
