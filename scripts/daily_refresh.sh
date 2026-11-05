@@ -52,6 +52,11 @@ fi
 echo "[$(date -Is)] make wiki-extracts"
 make wiki-extracts
 
+# Cheap (about 45 requests) and rewritten from scratch each run, so a label
+# or alias someone adds on Wikidata shows up within a day.
+echo "[$(date -Is)] make wikidata-labels"
+make wikidata-labels
+
 echo "[$(date -Is)] make monument-pages"
 make monument-pages
 

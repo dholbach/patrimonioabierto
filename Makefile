@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: help fetch build photo-stats wiki-extracts monument-pages potw test serve deploy up down logs
+.PHONY: help fetch build photo-stats wiki-extracts wikidata-labels monument-pages potw test serve deploy up down logs
 
 help:
 	@echo "Available targets:"
@@ -11,6 +11,8 @@ help:
 	@echo "                   this to pick it up)"
 	@echo "  wiki-extracts    Fetch each linked monument's Wikipedia teaser extract into"
 	@echo "                   data/raw/ (~1 request/article, resumable) - feeds monument-pages"
+	@echo "  wikidata-labels  Fetch each linked monument's Spanish Wikidata label and aliases"
+	@echo "                   into data/raw/ (~45 requests) - feeds monument-pages"
 	@echo "  monument-pages   (Re)generate web/monumento/<id>-<slug>/index.html for every"
 	@echo "                   monument + web/sitemap.xml + web/robots.txt - run after"
 	@echo "                   build/wiki-extracts so both are picked up"
@@ -37,6 +39,9 @@ photo-stats:
 
 wiki-extracts:
 	@python3 scripts/fetch_wikipedia_extracts.py
+
+wikidata-labels:
+	@python3 scripts/fetch_wikidata_labels.py
 
 monument-pages:
 	@python3 scripts/build_monument_pages.py

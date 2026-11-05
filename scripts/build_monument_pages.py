@@ -39,7 +39,9 @@ correctly - nothing needs a redirect map.
 
 Run: python3 scripts/build_monument_pages.py
 Needs: web/data/cyl_monuments_wikidata.json (scripts/build_dataset.py),
-       data/raw/wikipedia_extracts.json (scripts/fetch_wikipedia_extracts.py,
+       data/raw/wikidata_labels.json (scripts/fetch_wikidata_labels.py,
+       optional - alternate names from Wikidata, shown on the page and in
+       its JSON-LD), data/raw/wikipedia_extracts.json (scripts/fetch_wikipedia_extracts.py,
        optional - monuments without an entry just render without an
        extract, same missing-note/CTA copy the live app shows).
 Writes: web/monumento/<jcyl_id>-<slug>/index.html (one per monument),
@@ -47,14 +49,17 @@ Writes: web/monumento/<jcyl_id>-<slug>/index.html (one per monument),
 """
 import html
 import json
+import math
 import os
 import re
+import shutil
 import unicodedata
 
 WEB_DIR = os.path.join(os.path.dirname(__file__), "..", "web")
 RAW_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 DATASET_FILE = os.path.join(WEB_DIR, "data", "cyl_monuments_wikidata.json")
 EXTRACTS_FILE = os.path.join(RAW_DIR, "wikipedia_extracts.json")
+LABELS_FILE = os.path.join(RAW_DIR, "wikidata_labels.json")
 INDEX_FILE = os.path.join(WEB_DIR, "index.html")
 OUT_ROOT = os.path.join(WEB_DIR, "monumento")
 SITE_URL = "https://patrimonioabierto.es"
@@ -78,6 +83,44 @@ CATEGORY_ICONS = {
     "INMUEBLES ASOCIADOS A LA DECLARACIÓN": "🔗",
 }
 DEFAULT_ICON = "📌"
+
+# How many neighbours each page links to, and how far away they may be. The
+# list exists for two reasons: it is real content a visitor can use, and
+# the plain <a href> links are the only way one monument page leads a crawler
+# to another (everything else is a map drawn by JavaScript).
+# Alternate names shown per page. Wikidata sometimes carries a dozen
+# spellings of one monument; the first few cover what people type.
+MAX_ALT_NAMES = 6
+
+NEARBY_COUNT = 6
+NEARBY_MAX_KM = 25
+
+MONTHS_ES = [
+    "enero", "febrero", "marzo", "abril", "mayo", "junio",
+    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+]
+
+# Singular, lowercase wording for a sentence ("... es un <this>"-free, see
+# build_summary()). Anything not listed falls back to the lowercased
+# category, so a category JCyL adds later still renders, just less polished.
+CATEGORY_NOUN = {
+    "MONUMENTO": "monumento",
+    "CASTILLOS": "castillo",
+    "HÓRREOS Y PALLOZAS": "hórreo o palloza",
+    "ARTE RUPESTRE": "yacimiento de arte rupestre",
+    "CONJUNTO HISTÓRICO": "conjunto histórico",
+    "ROLLOS DE JUSTICIA": "rollo de justicia",
+    "ZONA ARQUEOLÓGICA": "zona arqueológica",
+    "CONJUNTO ETNOLÓGICO": "conjunto etnológico",
+    "ARCHIVOS, MUSEOS Y BIBLIOTECAS": "archivo, museo o biblioteca",
+    "SITIO HISTÓRICO": "sitio histórico",
+    "ESCUDOS": "escudo",
+    "PAISAJE CULTURAL": "paisaje cultural",
+    "JARDÍN HISTÓRICO": "jardín histórico",
+    "HITOS FORALES": "hito foral",
+    "CONJUNTO INDUSTRIAL": "conjunto industrial",
+    "INMUEBLES ASOCIADOS A LA DECLARACIÓN": "inmueble asociado a una declaración de BIC",
+}
 
 ICON_WIKIDATA = (
     '<svg viewBox="0 0 1050 590" width="18" height="10" aria-hidden="true">'
@@ -119,6 +162,105 @@ def commons_file_path(image_url, width):
     return f"{image_url}{sep}width={width}"
 
 
+def fold(text):
+    """Lowercase, accent-free, single-spaced: two spellings that differ only
+    in accents or capitals compare equal."""
+    plain = "".join(c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c))
+    return " ".join(plain.split())
+
+
+def alt_names(record, label_entry):
+    """Other names the monument goes by, from Wikidata: its Spanish label
+    plus its aliases ("also known as"), minus anything that is the page's own
+    name or a repeat (compared without accents/capitals). That is the point of
+    including them: the catalogue name is one spelling, people search for
+    others ("Castillo de la Triste Condesa" is Arenas de San Pedro's castle)."""
+    if not label_entry:
+        return []
+    seen = {fold(record["name"])}
+    names = []
+    for candidate in [label_entry["label"], *label_entry["aliases"]]:
+        candidate = " ".join(candidate.split())
+        if not candidate or len(candidate) > 100 or fold(candidate) in seen:
+            continue
+        seen.add(fold(candidate))
+        names.append(candidate[0].upper() + candidate[1:])
+    return names[:MAX_ALT_NAMES]
+
+
+def category_noun(category):
+    return CATEGORY_NOUN.get(category, category.lower())
+
+
+def spanish_date(iso):
+    """2026-03-10 -> "10 de marzo de 2026"; None for anything else."""
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", iso or "")
+    if not m:
+        return None
+    year, month, day = int(m[1]), int(m[2]), int(m[3])
+    return f"{day} de {MONTHS_ES[month - 1]} de {year}"
+
+
+def page_title(record, ambiguous=False):
+    """"Name, Municipality (Province)" - the place is part of the title
+    because the name alone is not unique (89 entries are "Rollo de Justicia",
+    69 are "La Villa") and a title that several pages share gives a search
+    engine no reason to prefer this one. Also the words a person searching
+    for a monument actually types. `ambiguous` adds the JCyL number for the
+    few that still collide (several "La Villa" in one municipality)."""
+    number = f" · n.º {record['jcyl_id']}" if ambiguous else ""
+    return f"{record['name']}, {record['municipality']} ({record['province']}){number} - Patrimonio Abierto"
+
+
+def build_summary(record):
+    """One plain sentence of real, page-specific text. Short on purpose: the
+    point is the facts a query is made of (what it is, where, since when),
+    not padding."""
+    parts = [
+        f"{record['name']} es un bien protegido de la categoría «{category_noun(record['category'])}» "
+        f"situado en {record['municipality']}, provincia de {record['province']}, en Castilla y León."
+    ]
+    when = spanish_date(record.get("protection_date"))
+    if when:
+        parts.append(f"Está declarado Bien de Interés Cultural desde el {when}.")
+    return " ".join(parts)
+
+
+def distance_km(a, b):
+    """Great-circle distance between two records, in km (haversine)."""
+    lat1, lon1, lat2, lon2 = map(math.radians, (a["lat"], a["lon"], b["lat"], b["lon"]))
+    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lon2 - lon1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(h))
+
+
+def format_distance(km):
+    return f"{round(km * 1000)} m" if km < 1 else f"{km:.1f} km".replace(".", ",")
+
+
+def nearby_records(record, records):
+    """The NEARBY_COUNT closest other monuments within NEARBY_MAX_KM,
+    nearest first, as (record, km) pairs."""
+    # Cheap latitude/longitude box first: 1 degree of latitude is ~111 km,
+    # so most of the ~2,600 records are ruled out without a trig call.
+    dlat = NEARBY_MAX_KM / 111
+    dlon = NEARBY_MAX_KM / (111 * max(math.cos(math.radians(record["lat"])), 0.1))
+    found = []
+    for other in records:
+        if other["jcyl_id"] == record["jcyl_id"]:
+            continue
+        if abs(other["lat"] - record["lat"]) > dlat or abs(other["lon"] - record["lon"]) > dlon:
+            continue
+        km = distance_km(record, other)
+        if km <= NEARBY_MAX_KM:
+            found.append((other, km))
+    found.sort(key=lambda pair: pair[1])
+    return found[:NEARBY_COUNT]
+
+
+def page_path(record):
+    return f"/monumento/{record['jcyl_id']}-{slugify(record['name'])}/"
+
+
 def _sub(html_text, old, new, count=1):
     """Literal (non-regex) find/replace, asserting `old` was actually
     present - a silent no-op here would mean every page quietly shipped
@@ -128,18 +270,17 @@ def _sub(html_text, old, new, count=1):
     return html_text.replace(old, new, count)
 
 
-def build_head(shell, record, extract):
-    name = html.escape(record["name"])
-    title = f"{name} - Patrimonio Abierto"
+def build_head(shell, record, extract, ambiguous=False, alt=()):
+    title = html.escape(page_title(record, ambiguous))
     if extract:
         description = truncate(extract["extract"])
     else:
         description = truncate(
-            f"{record['name']}, {record['category'].title()} en {record['municipality']} "
-            f"({record['province']}), Bien de Interés Cultural de Castilla y León."
+            f"{record['name']}, {category_noun(record['category'])} en {record['municipality']} "
+            f"({record['province']}). Ficha con datos oficiales, Wikidata y fotos libres."
         )
     description_attr = html.escape(description, quote=True)
-    page_url = f"{SITE_URL}/monumento/{record['jcyl_id']}-{slugify(record['name'])}/"
+    page_url = SITE_URL + page_path(record)
     image = commons_file_path(record.get("image_url"), 1200) or f"{SITE_URL}/assets/logo-readme.png"
 
     # index.html itself now carries <base href="/"> directly (needed once
@@ -219,6 +360,8 @@ def build_head(shell, record, extract):
         "geo": {"@type": "GeoCoordinates", "latitude": record["lat"], "longitude": record["lon"]},
         "isPartOf": {"@type": "WebSite", "name": "Patrimonio Abierto", "url": f"{SITE_URL}/"},
     }
+    if alt:
+        json_ld["alternateName"] = list(alt)
     if record.get("image_url"):
         json_ld["image"] = commons_file_path(record["image_url"], 1200)
     if same_as:
@@ -235,7 +378,7 @@ def build_head(shell, record, extract):
     return shell
 
 
-def build_panel_content(record, extract):
+def build_panel_content(record, extract, nearby=(), aka=()):
     name = html.escape(record["name"])
     icon = CATEGORY_ICONS.get(record["category"], DEFAULT_ICON)
     kicker = f"{icon} {html.escape(record['category'])}"
@@ -244,23 +387,27 @@ def build_panel_content(record, extract):
         meta_line += f" · BIC desde {html.escape(record['protection_date'])}"
 
     image_url = commons_file_path(record.get("image_url"), 800)
+    alt = html.escape(f"{record['name']}, {record['municipality']} ({record['province']})", quote=True)
     if image_url:
         hero = (
             f'<div class="hero">'
             f'<img class="hero-img-bg" src="{image_url}" alt="" aria-hidden="true">'
-            f'<img class="hero-img" src="{image_url}" alt="">'
-            f'<div class="hero-scrim"><div class="hero-kicker">{kicker}</div><h2 class="hero-title">{name}</h2></div>'
+            f'<img class="hero-img" src="{image_url}" alt="{alt}">'
+            f'<div class="hero-scrim"><div class="hero-kicker">{kicker}</div><h1 class="hero-title">{name}</h1></div>'
             f"</div>"
         )
     else:
         hero = (
             f'<div class="hero hero-fallback">'
             f'<div class="hero-placeholder-icon">{icon}</div>'
-            f'<div class="hero-scrim"><div class="hero-kicker">{kicker}</div><h2 class="hero-title">{name}</h2></div>'
+            f'<div class="hero-scrim"><div class="hero-kicker">{kicker}</div><h1 class="hero-title">{name}</h1></div>'
             f"</div>"
         )
 
-    body = [f'<div class="meta">{meta_line}</div>']
+    body = [f'<div class="meta">{meta_line}</div>', f'<p class="summary">{html.escape(build_summary(record))}</p>']
+    if aka:
+        names = ", ".join(f"<i>{html.escape(n)}</i>" for n in aka)
+        body.append(f'<p class="aka">También conocido como: {names}.</p>')
 
     if not record["already_linked"]:
         body.append('<div class="missing-note">Sin enlazar a Wikidata todavía.</div>')
@@ -287,12 +434,20 @@ def build_panel_content(record, extract):
         badges.append(f'<a class="badge wikipedia" href="{extract["page_url"]}" target="_blank" rel="noopener">{ICON_WIKIPEDIA}Wikipedia</a>')
     body.append(f'<div class="link-badges">{"".join(badges)}</div>')
 
+    if nearby:
+        rows = "".join(
+            f'<li><a href="{page_path(other)}">{html.escape(other["name"])}</a> '
+            f'<span class="meta">{html.escape(other["municipality"])} · {format_distance(km)}</span></li>'
+            for other, km in nearby
+        )
+        body.append(f'<h3>Cerca de aquí</h3><ul class="list nearby-links">{rows}</ul>')
+
     return hero + f'<div class="panel-body">{"".join(body)}</div>'
 
 
-def build_page(shell_template, record, extract):
-    page = build_head(shell_template, record, extract)
-    panel_content = build_panel_content(record, extract)
+def build_page(shell_template, record, extract, nearby=(), ambiguous=False, alt=()):
+    page = build_head(shell_template, record, extract, ambiguous, alt)
+    panel_content = build_panel_content(record, extract, nearby, alt)
     page = _sub(page, '<aside id="panel">', '<aside id="panel" class="open">')
     page = _sub(page, '<div id="panel-content"></div>', f'<div id="panel-content">{panel_content}</div>')
     return page
@@ -305,17 +460,45 @@ def main():
     if os.path.exists(EXTRACTS_FILE):
         extracts = json.load(open(EXTRACTS_FILE, encoding="utf-8"))
 
+    labels = {}
+    if os.path.exists(LABELS_FILE):
+        labels = json.load(open(LABELS_FILE, encoding="utf-8"))
+
+    titles = {}
+    for record in records:
+        titles.setdefault(page_title(record), []).append(record["jcyl_id"])
+    ambiguous_ids = {i for ids in titles.values() if len(ids) > 1 for i in ids}
+
     os.makedirs(OUT_ROOT, exist_ok=True)
     written = []
     for record in records:
         extract = extracts.get(str(record["jcyl_id"]))
-        page = build_page(shell_template, record, extract)
+        page = build_page(
+            shell_template, record, extract, nearby_records(record, records),
+            record["jcyl_id"] in ambiguous_ids,
+            alt_names(record, labels.get(str(record["jcyl_id"]))),
+        )
         slug = f"{record['jcyl_id']}-{slugify(record['name'])}"
         out_dir = os.path.join(OUT_ROOT, slug)
         os.makedirs(out_dir, exist_ok=True)
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(page)
         written.append(slug)
+
+    # A monument JCyL drops from the catalogue keeps its folder here forever
+    # otherwise: a live URL with the old title and text that no longer
+    # matches anything. Only folders shaped like the ones written above and
+    # holding nothing but their index.html are removed.
+    stale = 0
+    for entry in os.listdir(OUT_ROOT):
+        path = os.path.join(OUT_ROOT, entry)
+        if entry in written or not re.match(r"\d+-", entry) or not os.path.isdir(path):
+            continue
+        if os.listdir(path) == ["index.html"]:
+            shutil.rmtree(path)
+            stale += 1
+    if stale:
+        print(f"removed {stale} page(s) of monuments no longer in the catalogue")
 
     with_extract = sum(1 for r in records if str(r["jcyl_id"]) in extracts)
     print(f"wrote {len(written)} monument pages ({with_extract} with a Wikipedia extract) to {OUT_ROOT}")

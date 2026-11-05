@@ -1970,3 +1970,12 @@ body:has(#map-wrap.contribute-bar-visible.potw-visible) #toast { bottom: 188px; 
   .hero-fallback .hero-placeholder-icon { font-size: 100px; }
 }
 
+
+/* The static per-monument pages (scripts/build_monument_pages.py) carry a
+   plain <ul> of links to neighbouring monuments in the HTML, for crawlers
+   and no-JS visitors. app.js replaces the whole panel once it boots, so this
+   is only ever seen before that - just keep it from looking like a raw list. */
+.nearby-links { list-style: none; margin: 0; padding: 0; }
+.nearby-links li { padding: 8px 0; border-top: 1px solid var(--border, rgba(0,0,0,.08)); }
+.nearby-links a { color: inherit; text-decoration: none; font-weight: 500; }
+.nearby-links a:hover { text-decoration: underline; }

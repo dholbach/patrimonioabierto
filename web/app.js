@@ -1284,7 +1284,7 @@ function heroBlock({ imageUrl, linkUrl, kicker, title, placeholderIcon, loading 
   const scrim = `
     <div class="hero-scrim">
       ${kicker ? `<div class="hero-kicker">${kicker}</div>` : ''}
-      <h2 class="hero-title">${title}</h2>
+      <h1 class="hero-title">${title}</h1>
     </div>
   `;
   // Populated by updateHeroDots() once the gallery's real length is known -
